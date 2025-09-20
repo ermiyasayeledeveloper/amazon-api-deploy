@@ -17,6 +17,12 @@ const stripe = require("stripe")(process.env.STRIP_KEY)
 const app = express()
 app.use(cors({origin: true}));
 
+// app.use(cors({
+//   origin: "http://localhost:5173/", // replace with your real Netlify URL
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   credentials: true
+// }));
+
 app.use(express.json())
 
 app.get("/", (req,res) => {
